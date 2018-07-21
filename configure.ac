@@ -15,6 +15,8 @@ AC_PROG_CPP
 AC_PROG_INSTALL
 AC_PROG_LN_S
 AC_PROG_MAKE_SET
+AC_PROG_LEX
+AC_PROG_YACC
 
 LT_INIT([dlopen])
 LT_CONFIG_LTDL_DIR([libltdl])
@@ -31,7 +33,7 @@ AC_TYPE_SIZE_T
 AC_FUNC_MALLOC
 AC_FUNC_MMAP
 AC_FUNC_REALLOC
-AC_CHECK_FUNCS([memmove memset mmap munmap strchr strrchr])
+AC_CHECK_FUNCS([memmove memset strchr strrchr])
 
 AC_CONFIG_MACRO_DIRS([m4])
 AC_CONFIG_HEADERS([config.h])
