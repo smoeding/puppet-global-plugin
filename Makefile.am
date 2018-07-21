@@ -1,10 +1,7 @@
 # Makefile.am
 
 ACLOCAL_AMFLAGS = -I m4
-
-SUBDIRS = libltdl plugin tests
-
-CLEANFILES = *~
+SUBDIRS         = libltdl plugin tests
 
 maintainer-clean-local:
 	-rm -rf m4 libltdl
