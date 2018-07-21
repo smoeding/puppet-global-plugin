@@ -106,7 +106,7 @@ int main(int argc, char *argv[]) {
   struct stat sb;
   int i;
 
-  for(i=0; i<argc; i++) {
+  for(i=1; i<argc; i++) {
 
     switch(stat(argv[i], &sb)) {
     case -1:
