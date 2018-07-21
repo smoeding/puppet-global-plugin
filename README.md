@@ -6,19 +6,29 @@ A GNU global plugin to parse Puppet manifests
 
 Note: This has only be tested on Debian 9 (Stretch)!
 
-You will need autoconf/automake/libtool to build the plugin. You can start by running the `autogen.sh` script in the top level directory:
+You will need autoconf/automake/libtool to build the plugin. Run the following comands in the top level directory:
 
 ``` shellsession
-./autogen.sh
+autoreconf -i -f -I m4
+./configure --prefix=/usr
+make
 ```
 
-This will build the plugin. Then run `make install` as `root` to install the plugin:
+This will build the plugin. You can ignore the message about `aclocal` not being able to find the `m4` directory.
+
+Optionally you can now also run the tests:
+
+``` shellsession
+make check
+```
+
+Then run `make install` as `root` to install the plugin:
 
 ``` shellsession
 make install
 ```
 
-The `autogen.sh` script uses `--prefix=/usr` and therefore the plugin will be installed in `/usr/lib/gtags` where GNU global expects the files on Debian.
+The `configure` script used `--prefix=/usr` and therefore the plugin will be installed in `/usr/lib/gtags` where GNU global expects the files on Debian.
 
 The installation also creates `/usr/lib/gtags/puppet.la`. This file is not used on Debian and can be deleted if you care.
 

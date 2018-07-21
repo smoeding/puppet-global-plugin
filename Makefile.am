@@ -4,8 +4,6 @@ ACLOCAL_AMFLAGS = -I m4
 
 SUBDIRS = libltdl plugin tests
 
-EXTRA_DIST = autogen.sh configure.ac
-
 CLEANFILES = *~
 
 maintainer-clean-local:
