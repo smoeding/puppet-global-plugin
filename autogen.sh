@@ -8,5 +8,5 @@ autoheader
 libtoolize --copy --force --ltdl
 automake --copy --add-missing --force-missing --foreign
 autoconf
-./configure
+./configure --prefix=/usr
 make
