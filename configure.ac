@@ -3,17 +3,14 @@
 #
 
 AC_INIT(global-puppet-plugin, 1.0.0, stm@kill-9.net)
-AM_INIT_AUTOMAKE([foreign subdir-objects])
+AM_INIT_AUTOMAKE([-Wall -Werror foreign subdir-objects])
 
 AC_SUBST([AM_CPPFLAGS], ['-I$(top_srcdir)/plugin'])
 
 # Checks for programs.
-AC_PROG_CXX
-AC_PROG_AWK
 AC_PROG_CC
-AC_PROG_CPP
+AM_PROG_AR
 AC_PROG_INSTALL
-AC_PROG_LN_S
 AC_PROG_MAKE_SET
 
 LT_INIT([dlopen])
@@ -35,6 +32,11 @@ AC_CHECK_FUNCS([memmove memset mmap munmap strchr strrchr])
 
 AC_CONFIG_MACRO_DIRS([m4])
 AC_CONFIG_HEADERS([config.h])
-AC_CONFIG_FILES([Makefile libltdl/Makefile plugin/Makefile tests/Makefile])
+AC_CONFIG_FILES([
+  Makefile
+  libltdl/Makefile
+  plugin/Makefile
+  tests/Makefile
+])
 
 AC_OUTPUT

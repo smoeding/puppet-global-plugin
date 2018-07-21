@@ -10,6 +10,7 @@
 *.in
 *.output
 /aclocal.m4
+/ar-lib
 /autom4te.cache/
 /compile
 /config.*
@@ -22,5 +23,7 @@
 /m4/
 /main
 /missing
+/stamp-h1
 /test-driver
+/tests/checkit
 Makefile
