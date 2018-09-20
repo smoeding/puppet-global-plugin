@@ -1,0 +1,1 @@
+Foo::Bar: lineno=1, file=./t-type.pp, line=type Foo::Bar = Integer

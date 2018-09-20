@@ -282,6 +282,7 @@ static int is_manifest(const char *token) {
 
   if (strcmp(token, "class") == 0) return 1;
   if (strcmp(token, "define") == 0) return 1;
+  if (strcmp(token, "type") == 0) return 1;
 
   return 0;
 }
